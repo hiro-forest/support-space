@@ -1,0 +1,282 @@
+@media (max-width: 767px){
+  .gift__wrapper {
+    background-color: lightcyan;
+    width: 100%;
+    height: 300vh;
+    .gift__header {
+      height: 100px;
+      width: 100%;
+      &__left {
+        // @include header()
+      }
+      &__middle {
+        height: 30px;
+        width: 100%;
+        padding-top: 10px;
+        text-align: center;
+      }
+      &__right {
+        height: 30px;
+        width: 100%;
+      }
+
+    }
+  }
+}
+
+
+
+
+@media (min-width: 768px){
+  .gifts__wrapper {
+    width: 100%;
+    height: 300%;
+    .gifts__header {
+      padding-top: 40px;
+      padding: 40px 150px 10px 110px;
+      display: flex;
+      justify-content: space-between;
+      height: 30px;
+      &__left {
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+      }
+      &__middle {
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+      }
+      &__right {
+        font-size: 20px;
+        color: black;
+        font-weight: bold;
+        letter-spacing: 0.2rem;
+      }
+    }
+    .gifts__main {
+      background-image: url("/assets/images/girl.jpg"), url("/assets/images/door.png");
+      // background: scroll 20px;
+      background-repeat: repeat-x, repeat-x;
+      background-size: cover, cover;
+      border: solid 5px #d16b16;
+      margin: 40px;
+      height: calc(100vh - 100px);
+      border-radius: 20px;
+      &__box {
+        margin-top: 50px;
+        margin-right: 100px;
+        float: right;
+        display: flex;
+        align-items: center;
+
+        &__1 {
+          background-color: white;
+          writing-mode: vertical-rl;
+          margin: 10px;
+          padding: 10px;
+          color: black;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 0.3rem;
+          border-radius: 5px;
+        }
+        &__2 {
+          background-color: white;
+          writing-mode: vertical-rl;
+          margin: 10px;
+          padding: 10px;
+          color: black;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 0.3rem;
+          border-radius: 5px;
+        }
+        &__3 {
+          background-color: white;
+          writing-mode: vertical-rl;
+          margin: 10px;
+          padding: 10px;
+          color: black;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 0.3rem;
+          border-radius: 5px;
+        }
+        &__4 {
+          background-color: white;
+          writing-mode: vertical-rl;
+          margin: 10px;
+          padding: 10px;
+          color: black;
+          font-size: 18px;
+          font-weight: bold;
+          letter-spacing: 0.3rem;
+          border-radius: 5px;
+        }
+      }
+
+    }
+    .gifts__body {
+      width: 100%;
+      height: 200vh;
+      &__upper {
+        width: cover;
+        padding: 40px;
+        flex-wrap: wrap;
+        display: flex;
+        // overflow: scroll;
+        &__box {
+          padding: 10px 0 10px 20px;
+          width: 31%;
+          height: 390px;
+          &__date {
+            width: 100%;
+            height: 25px;
+          }
+          &__image {
+            width: 100%;
+          }
+          img {
+            height: 290px;
+          }
+          &__name {
+            width: 100%;
+            height: 25px;
+          }
+          &__content {
+            width: 100%;
+            height: 50px;
+          }
+        }
+      }
+    }
+    .gifts__form {
+      padding: 20px;
+      &__box {
+        width:100%;
+        padding: 10px;
+        .new_gift {
+          display: flex;
+          justify-content: space-between;
+          padding-right: 25px;
+          .gift__message {
+              margin-left: 20px;
+              border-radius: 5px;
+              border: solid 5px #d16b16;
+              float: left;
+              height: 50px;
+              width: calc(100% - 220px);
+          }
+          .gift__image {
+            i {
+              color: black;
+              cursor: pointer;
+              .hidden {
+                display: none;
+              }
+            }
+          }
+          .gift__submit {
+            background-color: #d16b16;
+            border: none;
+            border-radius: 15px;
+            color: #ffffff;
+            font-size: 16px;
+            height: 50px;
+            margin-left: 15px;
+            padding: 0 30px;
+          }
+        }
+      }
+    }
+    .gifts__footer {
+      height: 100px;
+      text-align: center;
+      &__box {
+        .gifts__footer__copylight {
+          color: black;
+          text-decoration: none;
+          letter-spacing: 0.3rem;
+          font-size: 18px;
+          font-weight: inherit;
+        }
+      }
+    }
+  }
+}
+
+// @mixin header() {
+//   height: 30px;
+//   text-align: center;
+//   padding-top: 10px;
+// }
+
+
+
+
+
+
+
+
+
+
+
+// .gifts__wrapper
+//   .gifts__header
+//     .gifts__header__left
+//       支援一覧ページ
+//     .gifts__header__middle
+//       太陽のぎえんだん
+//     .gifts__header__right
+//       メニュー
+//   .gifts__main
+//     .gifts__main__box
+//       .gifts__main__box__1
+//         ほげほげ
+//       .gifts__main__box__2
+//         とどけましょう
+//       .gifts__main__box__3
+//         おかいものして
+//       .gifts__main__box__4
+//         あなたの気持ちを
+//   .gifts__body
+//     .gifts__body__upper
+//       .gifts__body__upper__box1
+//       - @gifts.each do |gift|
+//         .gifts__body__upper__box__name
+//           名前
+//         .gifts__body__upper__box__image
+//           写真
+//         .gifts__body__upper__box__date
+//           日付
+//         .gifts__body__upper__box__content
+//           コメント
+//       .gifts__body__upper__box2
+//       - @gifts.each do |gift|
+//         .gifts__body__upper__box__name
+//           名前
+//         .gifts__body__upper__box__image
+//           写真
+//         .gifts__body__upper__box__date
+//           日付
+//         .gifts__body__upper__box__content
+//           コメント
+//         -#   - if gift.image.present?
+//         -#     = image_tag gift.image.url
+//         -#   = gift.content
+//         -#   = gift.created_at.strftime("%Y/%m/%d %H:%M")
+//   .gifts__form
+//     .gifts__form__box
+//       = form_for [@gift] do |f|
+//         = f.text_field :content, class: 'gifts__form__box__message', placeholder: '    ねがいをこめて', id: "form__box"
+//         = f.label :image, class: 'gifts__form__box__message__image', id: "form__box" do
+//           = f.file_field :image, class: 'hidden'
+//           %i.fa.fa-photo-video
+//         = f.submit 'おくる', class: 'gifts__form__box__submit', id: "form__box"
+//   .gifts__footer
+//     .gifts__footer__box
+//       = link_to root_path, class: 'gifts__footer__copylight' do
+//         またね

@@ -1,0 +1,7 @@
+.giftTitle
+  = @gift.image.url
+.giftDate
+  = @giftt.created_at.strftime("%Y/%m/%d %H:%M")
+.giftAuthor
+.giftText
+  = simple_format @gift.content

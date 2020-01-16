@@ -1,0 +1,13 @@
+.show__wrapper
+  .show__header
+    お願い画面
+  .show__body
+    .show__body__box
+      = form_for (@gift) do |f|
+       = f.text_field :content, class: 'form__box__message', placeholder: ' type a message', id: "form__box"
+        .form__box__mask
+          = f.label :image, class: 'form__box__mask__image', id: "form__box" do
+          %i.fa.fa-image
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__box__mask__submit', id: "form__box"
+  .show__footer

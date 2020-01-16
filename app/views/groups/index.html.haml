@@ -1,0 +1,15 @@
+.index.wrapper
+
+  .index.header
+  .index.body
+    .index.body__box
+      - if group_signed_in?
+        .box__left
+          = current_group.groupname
+        = link_to "ログアウト", destroy_group_session_path, method: :delete, class: "box__right"
+      - else
+        = link_to new_group_registration_path, class: "box__left" do
+          新規登録
+        = link_to new_group_session_path, class: "box__right" do
+          ログイン
+  .index.footer

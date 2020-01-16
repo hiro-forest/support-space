@@ -1,0 +1,13 @@
+
+.gift{"data-gift-id": "#{gift.id}"}
+  .upper-gift
+    .upper-gift__group__name
+      = gift.group_id
+    .upper-gift__date
+      = gift.created_at.strftime("%Y/%m/%d %H:%M")
+  .lower-gift
+    - if gift.content.present?
+      %p.lower-gift__content
+        = gift.content
+    - if gift.image.present?
+      = image_tag gift.image.url, class: 'lower-gift__image' 

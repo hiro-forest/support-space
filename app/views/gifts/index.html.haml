@@ -1,0 +1,46 @@
+.gifts__wrapper
+  .gifts__header
+    .gifts__header__left
+      支援一覧ページ
+    .gifts__header__middle
+      足長おじさん
+    .gifts__header__right
+      メニュー
+  .gifts__main
+    .gifts__main__box
+      .gifts__main__box__1
+        ほげほげ
+      .gifts__main__box__2
+        とどけましょう
+      .gifts__main__box__3
+        おかいものして
+      .gifts__main__box__4
+        あなたの気持ちを
+  .gifts__body
+    .gifts__body__upper
+      .gifts__body__upper__hide
+      - @gifts.each do |gift|
+        .gifts__body__upper__box
+          .gifts__body__upper__box__date
+            = gift.created_at.strftime("%Y/%m/%d %H:%M")
+          .gifts__body__upper__box__image
+          - if gift.image.present?
+            = image_tag gift.image.url, class: 'gifts__body__upper__box__image'
+          .gifts__body__upper__box__name
+            = gift.group_id
+          .gifts__body__upper__box__content
+            = gift.content
+
+
+  .gifts__form
+    .gifts__form__box
+      = form_for [@gift] do |f|
+        = f.text_field :content, class: 'gift__message', placeholder: '    ねがいをこめて', id: "form__box"
+        = f.label :image, class: 'gift__image', id: "form__box" do
+          %i.fas.fa-image
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'おくる', class: 'gift__submit', id: "form__box"
+  .gifts__footer
+    .gifts__footer__box
+      = link_to root_path, class: 'gifts__footer__copylight' do
+        またね

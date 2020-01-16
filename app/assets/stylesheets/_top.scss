@@ -1,0 +1,61 @@
+.top.wrapper {
+  .top.header {
+    opacity: 0.5;
+    background-color: gray;
+    width: 100%;
+    height: 50px;
+    &__message {
+      padding-top: 5px;
+      text-align: center;
+      letter-spacing: 0.1rem;
+      font-style: italic;
+      text-shadow: 1px 1px 2px silver;
+      font-size: 25px;
+      color: black;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+  }
+  .top.body {
+    height: calc(100vh - 50px);
+    background-image: url("/assets/images/night.png");
+    background-size: cover;
+    &__upper {
+      height: 200px;
+    }
+    &__box {
+      display: flex;
+      align-items: stretch;
+      margin: 0 auto;
+      vertical-align: center;
+      width: 100vw;
+      height: 200px;
+      &__1 {
+        padding: 60px;
+        width: 25vw;
+        height: 60px;
+      }
+      &__2 {
+        font-family: 'Amatic SC', cursive;
+        font-weight: bold;
+        color: white;
+        padding: 50px;
+        width: 25vw;
+        height: 60px;
+
+      }
+      &__3 {
+        font-weight: bold;
+        color: white;
+        padding: 50px;
+        width: 25vw;
+        height: 60px;
+      } 
+      &__4 {
+        padding: 50px;
+        width: 25vw;
+        height: 60px;
+      }
+    }
+  }
+  
+}
